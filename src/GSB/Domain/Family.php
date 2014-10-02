@@ -17,6 +17,15 @@ class Family
      * @var string
      */
     private $name;
+	
+	/**
+	* Type id
+	*
+	* @var integer
+	*/
+	private $typeId;
+	
+	
 
     public function getId() {
         return $this->id;
