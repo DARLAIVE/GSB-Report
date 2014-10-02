@@ -14,7 +14,7 @@ class FamilyDAO extends DAO
     public function findAll() {
         $sql = "select * from family order by family_name";
         $result = $this->getDb()->fetchAll($sql);
-        
+		
         // Converts query result to an array of domain objects
         $families = array();
         foreach ($result as $row) {
