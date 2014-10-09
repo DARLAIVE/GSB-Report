@@ -12,13 +12,6 @@ class Practitioner
     private $id;
 
     /**
-     * Type id.
-     *
-     * @var integer
-     */
-    private $typeId;
-
-    /**
      * Name.
      *
      * @var string
@@ -40,9 +33,9 @@ class Practitioner
     private $address;
 
     /**
-     * Zip code.
+     * Zip Code.
      *
-     * @var integer
+     * @var string
      */
     private $zipCode;
 
@@ -52,20 +45,20 @@ class Practitioner
      * @var string
      */
     private $city;
-	
-	/**
-	* Notoriety coefficient
-	*
-	* @var float
-	*/
-	private $notorietyCoefficient;
 
     /**
-     * Family.
+     * Notoriety coefficient.
      *
-     * @var \GSB\Domaine\Family
+     * @var float
      */
-    private $family;
+    private $notorietyCoefficient;
+
+    /**
+     * Type.
+     *
+     * @var \GSB\Domaine\PractitionerType
+     */
+    private $type;
 
     public function getId() {
         return $this->id;
@@ -104,7 +97,7 @@ class Practitioner
     }
 
     public function setZipCode($zipCode) {
-        $this->effects = $zipCode;
+        $this->zipCode = $zipCode;
     }
 
     public function getCity() {
@@ -119,15 +112,15 @@ class Practitioner
         return $this->notorietyCoefficient;
     }
 
-    public function setNotorietyCoefficent($notorietyCoefficient) {
-        $this->samplePrice = $notorietyCoefficient;
+    public function setnotorietyCoefficient($notorietyCoefficient) {
+        $this->notorietyCoefficient = $notorietyCoefficient;
     }
 
-    public function getFamily() {
-        return $this->family;
+    public function getType() {
+        return $this->type;
     }
 
-    public function setFamily($family) {
-        $this->family = $family;
+    public function setType($type) {
+        $this->type = $type;
     }
 }
